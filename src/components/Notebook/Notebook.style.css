@@ -1,0 +1,38 @@
+/* ----------------------------Notebook addnew icon---------------------------------- */
+.notebook {
+  position: relative;
+  margin-top: 0px;
+  padding-top: 85px;
+}
+.notebook-header-active {
+  /* visibility: visible; */
+  opacity: 1;
+  /* transition: all 0.1s ease; 
+    -webkit-transition: all 0.1s ease-in-out; */
+}
+.notebook-header {
+  /* visibility: hidden; */
+  opacity: 0;
+  /* transition: all 0.1s ease; 
+    -webkit-transition: all 0.1s ease-out; */
+}
+.addnew-icon {
+  transition: all ease-in 0.3s;
+}
+.addnew-icon:hover {
+  color: rgb(182, 248, 202);
+}
+.fa-plus-circle {
+  position: relative;
+  z-index: 1;
+}
+.nonedisplay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+}

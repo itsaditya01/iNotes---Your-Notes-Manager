@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 dotenv.config({ path: "./.env" });
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 var cors = require("cors");
 
 connectToMongo();

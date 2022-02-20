@@ -1,0 +1,67 @@
+.nav__black {
+  background-color: #001524;
+  z-index: 2;
+  transition: all 0.1s ease-out;
+  box-shadow: 0px 10px 50px gray;
+}
+.nav__white {
+  transition: all 0.3s ease-out;
+}
+.navbar {
+  position: fixed;
+  z-index: 2;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.navbar-brand {
+  transition: all 0.3s ease-out;
+}
+.bg-light {
+  background-color: #e8a87c !important;
+}
+
+.menu {
+  position: absolute;
+  top: 220%;
+  right: -80%;
+  background-color: white;
+  padding: 20px;
+  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  z-index: 500;
+  visibility: hidden;
+}
+.fa-user-circle {
+  transition: color 0.3s ease-out;
+}
+.menu:hover,
+.fa-user-circle:hover ~ .menu {
+  visibility: visible;
+  z-index: 500;
+  opacity: 1;
+  top: 170%;
+}
+.name {
+  text-align: center;
+  padding: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+.email {
+  padding-bottom: 5px;
+}
+.menu::before {
+  content: "";
+  position: absolute;
+  right: 18%;
+  top: -5%;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.logout {
+  text-decoration: none;
+}
