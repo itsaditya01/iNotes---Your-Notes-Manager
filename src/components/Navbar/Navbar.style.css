@@ -7,11 +7,14 @@
 .nav__white {
   transition: all 0.3s ease-out;
 }
+
 .navbar {
   position: fixed;
+  box-shadow: 0px -6px 21px;
   z-index: 2;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+  background-color: black;
 }
 .navbar-brand {
   transition: all 0.3s ease-out;
@@ -21,6 +24,7 @@
 }
 
 .menu {
+  /* display: none */
   position: absolute;
   top: 220%;
   right: -80%;

@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const connectToMongo = require("./db");
 const dotenv = require("dotenv");
-const cookieParser = require("cookie-parser");
 dotenv.config({ path: "./.env" });
 
 const port = 5000;
@@ -13,7 +12,6 @@ connectToMongo();
 //Middleware
 app.use(express.json());
 app.use(cors());
-app.use(cookieParser());
 
 //available routes
 app.use("/api/auth", require("./routes/auth"));

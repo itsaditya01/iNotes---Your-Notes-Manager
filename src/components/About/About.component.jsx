@@ -7,7 +7,7 @@ function About() {
     return (
         <div>
             <Navbar />
-            <div className="main__about">
+            <div className="main__about" style={{backgroundColor: "white"}}>
                 <div className="row about__row d-flex flex-row-reverse">
                     <div className="col-sm-1"></div>
                     <div className="col-md-5 col-sm-12 col-12 d-flex align-items-center justify-content-center">
@@ -21,12 +21,12 @@ function About() {
                                 </h1>
                             </div>
                             <div className="pt-2 pb-3">
-                                <h3 className='about__font__h3'>
+                                <h6 className='about__font__h3'>
                                     Sign In to explore the features of iNotes
-                                </h3>
+                                </h6 >
                             </div>
                             <div>
-                                <Link to='/login'><button className="btn btn-dark main__btn">Sign In</button></Link>
+                                <Link to='/login'><button className="btn btn-dark main__btn" style={{}}>Sign In</button></Link>
                             </div>
                         </div>
                     </div>

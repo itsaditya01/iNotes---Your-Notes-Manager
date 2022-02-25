@@ -24,7 +24,7 @@ function SignUp() {
         const data = await response.json();
         if (data.success) {
             localStorage.setItem('token', data.authToken);
-            navigate.push('/home');
+            navigate('/home');
         }
         else {
             alert(data.error);
@@ -36,13 +36,14 @@ function SignUp() {
   return (
     <div id="login">
       <div className="grid">
+        <h2 className="mb-4">Sign up</h2>
         <form
           method="POST"
           className="form login"
           onSubmit={createUser}
         >
           <div className="form__field">
-            <label htmlFor="login__username">
+            <label htmlFor="login__username" style={{position: "relative"}}>
               <svg className="icon">
                 <FaUser />
               </svg>
@@ -54,7 +55,7 @@ function SignUp() {
               type="text"
               onChange={onChange} 
               value={credentials.name}
-              name="username"
+              name="name"
               className="form__input"
               placeholder="Name"
               required
@@ -62,7 +63,7 @@ function SignUp() {
           </div>
 
           <div className="form__field">
-            <label htmlFor="login__password">
+            <label htmlFor="login__password" style={{position: "relative"}}>
               <svg className="icon">
                 <MdEmail />
               </svg>
@@ -80,7 +81,7 @@ function SignUp() {
             />
           </div>
           <div className="form__field">
-            <label htmlFor="login__password">
+            <label htmlFor="login__password" style={{position: "relative"}}>
               <svg className="icon">
                 <FaLock />
               </svg>
@@ -98,7 +99,7 @@ function SignUp() {
             />
           </div>
           <div className="form__field">
-            <label htmlFor="login__password">
+            <label htmlFor="login__password" style={{position: "relative"}}>
               <svg className="icon">
                 <FaLock />
               </svg>
@@ -107,7 +108,7 @@ function SignUp() {
             <input
               id="login__password"
               type="password"
-              name="password"
+              name="cpassword"
               onChange={onChange} 
               value={credentials.cpassword}
               className="form__input"
@@ -120,13 +121,13 @@ function SignUp() {
           </div>
         </form>
 
-        <p className="text--center text-white">
+        <p className="text- center text-white">
           Already have an account?{" "}
-          <Link to="#" style={{ color: "#ea4c88" }}>
+          <Link to="/login" style={{ color: "#ea4c88" }}>
             {" "}
             {"  Login now"}  
           </Link>{" "}
-          <svg className="icon" style={{ fontSize: "1.5em" }}>
+          <svg className="icon1" style={{ fontSize: "1.5em" }}>
             <BiRightArrowAlt style={{ color: "#ea4c88" }} />
           </svg>
         </p>

@@ -1,62 +1,64 @@
-.main__about{
+.main__about {
   background-color: #1f3f5b;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 776px) {
+  .main__about {
+    display: block;
+    margin: 0 !important;
   }
-  @media (max-width: 776px) {
-    .main__about{
-      display: block;
-      margin: 0 !important;
-    }
+}
+.about__row {
+  height: 100%;
+  width: 100%;
+}
+.about__font__h1 {
+  background: transparent;
+  color: transparent;
+  font-size: 4vw;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.about__font__h3 {
+  font-size: 2vw;
+}
+.main__btn {
+  transition: all 0.3s ease-in;
+  background-color: #f9d5ff;
+  color: black;
+  font-size: 1.5em;
+}
+.main__btn:hover {
+  background: transparent;
+  color: black;
+}
+
+.about__ill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: auto;
+}
+@media screen and (max-width: 769px) {
+  .about__ill {
+    width: 70vw;
   }
-  .about__row{
-    height: 100%;
-    width: 100%;
+}
+@media screen and (max-width: 581px) {
+  .about__ill {
+    width: 80vw;
   }
-  .about__font__h1{
-    background:transparent;
-    color: transparent;
-    font-size: 5vw;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+  .about__font__h1 {
+    font-size: 8vw;
   }
-  .about__font__h3{
+  .about__font__h3 {
     font-size: 3vw;
   }
-  .main__btn{
-    transition: all 0.3s ease-in;
-    font-size: 1.5em;
-  }
-  .main__btn:hover{
-    background: transparent;
-    color: black;
-  }
-  
-  .about__ill{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50vw;
-    height: auto;
-  }
-  @media screen and (max-width: 769px){
-    .about__ill{
-      width: 70vw;
-    }
-  }
-  @media screen and (max-width: 581px) {
-    .about__ill{
-      width: 80vw;
-    }
-    .about__font__h1{
-      font-size: 8vw;
-    }
-    .about__font__h3{
-      font-size: 3vw;
-    }
-  }
+}

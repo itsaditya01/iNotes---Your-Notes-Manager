@@ -34,20 +34,21 @@ function Login() {
   return (
     <div id="login">
       <div className="grid">
+        <h2 className="mb-4">Login</h2>
         <form
           method="POST"
           className="form login"
           onSubmit={loginUser}
         >
           <div className="form__field">
-            <label for="login__username">
+            <label for="login__username" style={{position: "relative"}}>
               <svg className="icon">
                 <FaUser />
               </svg>
               <span className="hidden">Username</span>
             </label>
             <input
-              // autocomplete="username"
+              autocomplete="username"
               value={credentials.email} 
               onChange={onChange}
               id="login__username"
@@ -60,7 +61,7 @@ function Login() {
           </div>
 
           <div className="form__field">
-            <label for="login__password">
+            <label for="login__password"  style={{position: "relative"}}>
               <svg className="icon">
                 <FaLock />
               </svg>
@@ -83,13 +84,13 @@ function Login() {
           </div>
         </form>
 
-        <p className="text--center text-white">
+        <p className="text-center text-white" style={{position: "relative"}}>
           Not a member?{" "}
           <Link to="/signup" style={{ color: "#ea4c88" }} >
             {" "}
             {"  Sign up now"}
           </Link>{" "}
-          <svg className="icon" style={{ fontSize: "1.5em" }}>
+          <svg className="icon1" style={{ fontSize: "1.5em" }}>
             <BiRightArrowAlt style={{ color: "#ea4c88" }} />
           </svg>
         </p>

@@ -1,9 +1,10 @@
 import React from 'react';
 import { useState, useContext, useEffect } from 'react';
-// import Popup from './Popup';
+import AddNote from './AddNote/AddNote.component';
 import noteContext from '../../Context/noteContext'
 import Notes from './Notes/Notes.component';
 import { useNavigate } from 'react-router';
+import "./Notebook.style.css"
 
 function Notebook() {
     let navigate = useNavigate();
@@ -12,6 +13,7 @@ function Notebook() {
     const context = useContext(noteContext);
     const { notes, getallnotes, loading } = context;
     const [pop, setpop] = useState(false);
+    console.log(notes, ": notes");
     const togglePop = () => {
         if (pop === true) {
             setpop(false);
@@ -43,7 +45,7 @@ function Notebook() {
             <div className="container">
                 <div className={`${nav1 ? "notebook-header" : "notebook-header-active"} d-flex my-3 align-items-center`}>
                     <div className="title-inner w-100 ms-4">
-                        <h4>All Notes</h4>
+                        <h4 style={{textAlign: "left"}}>All Notes</h4>
                     </div>
                     <div className="addnew flex-shrink-1 me-4">
                         <span className="addnew-icon">
@@ -51,8 +53,8 @@ function Notebook() {
                         </span>
                     </div>
                 </div>
-                {/* {pop &&
-                    <Popup pop={pop} togglePop={togglePop} />} */}
+                {pop &&
+                    <AddNote pop={pop} togglePop={togglePop} />}
                 <div className="row">
                     {notes.length !== 0 ?
                         notes.map((note) => {

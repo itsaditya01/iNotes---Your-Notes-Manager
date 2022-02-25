@@ -100,9 +100,6 @@ router.post(
       };
       success = true;
       const authToken = jwt.sign(data, JWT_SECRET);
-      res.cookie("authToken", authToken, {
-        httpOnly: true,
-      });
       res.json({ success, authToken });
     } catch (error) {
       console.log(error.message);
