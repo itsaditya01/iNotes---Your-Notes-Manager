@@ -1,0 +1,6 @@
+.view_note {
+  text-align: left;
+  color: var(--yellow);
+  margin-left: 2px;
+  margin-bottom: 3px;
+}

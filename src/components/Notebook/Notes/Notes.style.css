@@ -6,20 +6,12 @@
   min-width: 100px;
   margin-top: 50px;
   margin: 50px auto 20px auto;
-  border-top: 5px solid;
+  border-top: 5px solid #a7bbcd;
   box-shadow: 0px 0px 0px black;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 1.4em 2.5em;
-  background-image: linear-gradient(
-      -70deg,
-      rgba(0, 0, 0, 0.15) 60%,
-      transparent 60%
-    ),
-    linear-gradient(-20deg, rgba(0, 0, 0, 0.15) 50%, transparent 50%),
-    linear-gradient(40deg, rgba(0, 0, 0, 0.15) 60%, transparent 60%),
-    linear-gradient(-50deg, rgba(0, 0, 0, 0.15) 15%, transparent 15%),
-    linear-gradient(137.42deg, #aa00ff 0%, #7c4dff 50.43%, #304ffe 100%);
+  background: #183153;
   color: white;
   text-align: left;
   position: relative;
@@ -58,7 +50,7 @@
   padding: 2px 3px;
   border-radius: 5px;
   width: fit-content;
-  background-color: rgb(160, 160, 255);
+  background-color: #146ebe;
   z-index: 100;
 }
 .desc {
@@ -76,12 +68,21 @@
   bottom: 5%;
   z-index: 100;
 }
-.fas {
+.note-body .fas {
   cursor: pointer;
+  color: white !important;
+  font-size: 1rem;
 }
 .fa-trash:hover {
   color: #7f868b;
 }
 .fa-pencil-alt:hover {
   color: rgb(91, 91, 214);
+}
+.title {
+  font-size: 1.8rem;
+}
+.tag {
+  font-size: 1.2rem;
+  color: #a7bbcd;
 }

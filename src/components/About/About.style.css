@@ -30,8 +30,8 @@
 }
 .main__btn {
   transition: all 0.3s ease-in;
-  background-color: #f9d5ff;
-  color: black;
+  background-color: var(--light-blue);
+  color: white;
   font-size: 1.5em;
 }
 .main__btn:hover {

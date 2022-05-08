@@ -1,17 +1,17 @@
 import React, { useContext, useState } from "react";
 import noteContext from "../../../Context/noteContext";
-import "./AddNote.style.css";
+import "./EditNote.style.css";
 
-function AddNote(props) {
+function EditNote(props) {
   const [note, setNote] = useState({
-    title: "",
-    description: "",
-    tag: "default",
+    title: props.title,
+    description: props.description,
+    tag: props.tag,
   });
   const context = useContext(noteContext);
-  const { addnote } = context;
+  const { editnote } = context;
   const twoInOne = () => {
-    addnote(note.title, note.description, note.tag);
+    editnote(props.id, note.title, note.description, note.tag);
     props.togglePop();
   };
   const onChange = (e) => {
@@ -21,7 +21,7 @@ function AddNote(props) {
     <>
       {props.pop && (
         <div className="popup" style={{ zIndex: 11111 }}>
-          <div className="popup-inner  d-flex">
+          <div className="popup-inner d-flex">
             <form action="" method="post">
               <span className="cancel-icon">
                 <i
@@ -31,41 +31,57 @@ function AddNote(props) {
               </span>
               <div className="form-row my-2">
                 <div className="col-12">
+                  <div className="view_note_wrapper">
+                    <h6 className="view_note" name="Title">
+                      Title
+                    </h6>
+                  </div>
                   <input
                     type="text"
                     onChange={onChange}
-                    className="addInput form-control"
+                    value={note.title}
+                    className="addInput popup_note_details form-control"
                     name="title"
                     id="title"
                     placeholder="title"
-                    required
                   />
                 </div>
               </div>
               <div className="form-row my-2">
                 <div className="col-12">
+                  <div className="view_note_wrapper">
+                    <h6 className="view_note" name="Title">
+                      Tag
+                    </h6>
+                  </div>
                   <input
                     type="text"
                     onChange={onChange}
+                    value={note.tag}
                     name="tag"
                     id="tag"
-                    className="addInput form-control"
-                    placeholder="tag"
+                    className="addInput popup_note_details form-control"
+                    placeholder="tags"
                   />
                 </div>
               </div>
               <div className="form-row my-2">
                 <div className="col-12">
+                  <div className="view_note_wrapper">
+                    <h6 className="view_note" name="Title">
+                      Description
+                    </h6>
+                  </div>
+
                   <textarea
                     name="description"
                     onChange={onChange}
+                    value={note.description}
                     id="description"
                     cols="60"
-                    rows="10"
-                    className="addInput form-control"
+                    rows="12"
+                    className="addInput popup_note_details form-control"
                     placeholder="write descrption here"
-                    required
-                    minLength={3}
                   ></textarea>
                 </div>
               </div>
@@ -76,9 +92,8 @@ function AddNote(props) {
                     className="btn"
                     style={{ backgroundColor: "var(--yellow)" }}
                     onClick={twoInOne}
-                    disabled={!note.title && note.description.length < 3}
                   >
-                    Save & Add
+                    Save
                   </button>
                 </div>
               </div>
@@ -90,4 +105,4 @@ function AddNote(props) {
   );
 }
 
-export default AddNote;
+export default EditNote;

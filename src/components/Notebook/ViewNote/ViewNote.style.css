@@ -1,0 +1,13 @@
+/* .view_note::before {
+  position: relative;
+  transform: translateX(30px);
+  content: attr(name) " ";
+  z-index: 99;
+  color: var(--yellow);
+  font-size: 1.1em;
+  font-weight: bolder;
+} */
+.popup_note_details {
+  background-color: #d4d4d4 !important;
+  /* box-shadow: 0px 0px 11px rgb(207, 133, 133); */
+}
