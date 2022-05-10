@@ -28,8 +28,8 @@ function SignUp() {
     });
     const data = await response.json();
     if (data.success) {
-      localStorage.setItem("token", data.authToken);
-      navigate("/home");
+      // localStorage.setItem("token", data.authToken);
+      navigate("/login");
     } else {
       alert(data.error);
     }

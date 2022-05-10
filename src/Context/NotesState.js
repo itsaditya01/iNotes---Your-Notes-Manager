@@ -8,7 +8,7 @@ const NoteState = (props) => {
   const [loading, setLoading] = useState(true);
   const [searchedString, setSearchedString] = useState("");
 
-  //fetchi'' notes
+  //fetching notes
   const getallnotes = async () => {
     setLoading(true);
     //API call

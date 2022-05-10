@@ -13,7 +13,6 @@ function Notebook() {
   const context = useContext(noteContext);
   const { notes, getallnotes, loading, searchedString } = context;
   const [pop, setpop] = useState(false);
-  console.log(notes, ": notes");
   const togglePop = () => {
     if (pop === true) {
       setpop(false);
@@ -61,7 +60,7 @@ function Notebook() {
           {notes.length !== 0
             ? notes
                 .filter((note) => {
-                  if (searchedString === "") {
+                  if (searchedString === "" || searchedString === null) {
                     return note;
                   } else if (
                     note.tag
